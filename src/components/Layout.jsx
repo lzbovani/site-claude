@@ -1,7 +1,8 @@
-import { useEffect } from 'react'
+import { useEffect, Suspense } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
+import PageLoader from './PageLoader.jsx'
 
 // Casca da aplicação: navbar + conteúdo da rota + footer.
 // Também rola a página para o topo a cada troca de rota (comportamento SPA).
@@ -16,7 +17,9 @@ export default function Layout() {
     <div className="flex min-h-screen flex-col">
       <Navbar />
       <main className="flex-1">
-        <Outlet />
+        <Suspense fallback={<PageLoader />}>
+          <Outlet />
+        </Suspense>
       </main>
       <Footer />
     </div>

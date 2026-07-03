@@ -1,11 +1,16 @@
+import { lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout.jsx'
-import Home from './pages/Home.jsx'
-import Menu from './pages/Menu.jsx'
-import About from './pages/About.jsx'
-import Gallery from './pages/Gallery.jsx'
-import Contact from './pages/Contact.jsx'
-import NotFound from './pages/NotFound.jsx'
+
+// Code-splitting por rota: cada página vira um chunk carregado sob demanda.
+// A casca (Layout) e o Suspense ficam no bundle inicial; o conteúdo da rota
+// é buscado quando o usuário navega até ela.
+const Home = lazy(() => import('./pages/Home.jsx'))
+const Menu = lazy(() => import('./pages/Menu.jsx'))
+const About = lazy(() => import('./pages/About.jsx'))
+const Gallery = lazy(() => import('./pages/Gallery.jsx'))
+const Contact = lazy(() => import('./pages/Contact.jsx'))
+const NotFound = lazy(() => import('./pages/NotFound.jsx'))
 
 export default function App() {
   return (

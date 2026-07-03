@@ -11,7 +11,8 @@ const emptyForm = {
 }
 
 // Regras de validação isoladas — fáceis de testar e reutilizar.
-function validate(form) {
+// Exportada para permitir testes unitários diretos (ver useReservationForm.test.js).
+export function validate(form) {
   const errors = {}
 
   if (!form.name.trim()) {

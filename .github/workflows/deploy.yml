@@ -25,6 +25,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm test
       - run: npm run build
       # Fallback de SPA: qualquer rota desconhecida cai no 404.html,
       # que é uma cópia do index e deixa o React Router assumir.
