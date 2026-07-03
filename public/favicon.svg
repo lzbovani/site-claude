@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#2e2622" />
+  <!-- xícara -->
+  <path
+    d="M9 15h11v4a4 4 0 0 1-4 4h-3a4 4 0 0 1-4-4v-4Z"
+    fill="#faf6f0"
+  />
+  <path d="M20 16h1.5a2.5 2.5 0 0 1 0 5H20" fill="none" stroke="#faf6f0" stroke-width="1.6" />
+  <!-- orelhinhas de gato saindo do vapor -->
+  <path d="M12 9l1.6 3h-3.2L12 9Z" fill="#c1876b" />
+  <path d="M17 9l1.6 3h-3.2L17 9Z" fill="#c1876b" />
+</svg>

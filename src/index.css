@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Tokens de tema. Formato "R G B" para permitir alpha via Tailwind. */
+  :root {
+    --bg: 250 246 240; /* cream */
+    --surface: 240 232 221; /* sand */
+    --ink: 46 38 34; /* espresso */
+    color-scheme: light;
+  }
+
+  .dark {
+    --bg: 26 22 20; /* marrom quase preto */
+    --surface: 38 31 28;
+    --ink: 240 233 224; /* off-white quente */
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg text-ink font-sans antialiased transition-colors duration-300;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+
+  /* Anel de foco consistente e acessível em toda a navegação por teclado */
+  :focus-visible {
+    @apply outline-none ring-2 ring-clay ring-offset-2 ring-offset-bg;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8;
+  }
+
+  /* Botão primário reutilizável — inverte com o tema (ink/bg). */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+      text-sm font-medium transition-colors duration-200 focus-visible:ring-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-ink text-bg hover:bg-clay hover:text-cream;
+  }
+
+  .btn-outline {
+    @apply btn border border-ink/25 text-ink hover:border-clay hover:text-clay;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-clay;
+  }
+}
+
+/* Respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

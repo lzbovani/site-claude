@@ -1,0 +1,102 @@
+// Cardápio. `category` liga cada item aos filtros abaixo.
+export const menuCategories = [
+  { id: 'all', label: 'Tudo' },
+  { id: 'coffee', label: 'Café' },
+  { id: 'tea', label: 'Chás' },
+  { id: 'sweets', label: 'Doces' },
+  { id: 'savory', label: 'Salgados' },
+]
+
+export const menuItems = [
+  {
+    id: 'espresso',
+    name: 'Espresso Ronronar',
+    category: 'coffee',
+    price: 8.0,
+    description: 'Blend da casa, torra média, notas de cacau e caramelo.',
+  },
+  {
+    id: 'flat-white',
+    name: 'Flat White',
+    category: 'coffee',
+    price: 14.0,
+    description: 'Dose dupla com leite vaporizado aveludado.',
+  },
+  {
+    id: 'cold-brew',
+    name: 'Cold Brew da Casa',
+    category: 'coffee',
+    price: 16.0,
+    description: 'Extração a frio por 18h, servido com gelo.',
+  },
+  {
+    id: 'mocha',
+    name: 'Mocha de Avelã',
+    category: 'coffee',
+    price: 18.0,
+    description: 'Espresso, chocolate 70% e um toque de avelã.',
+  },
+  {
+    id: 'chamomile',
+    name: 'Camomila & Mel',
+    category: 'tea',
+    price: 12.0,
+    description: 'Infusão calmante — a favorita das tardes lentas.',
+  },
+  {
+    id: 'matcha',
+    name: 'Matcha Latte',
+    category: 'tea',
+    price: 17.0,
+    description: 'Matcha cerimonial batido com leite quente.',
+  },
+  {
+    id: 'hibiscus',
+    name: 'Chá de Hibisco',
+    category: 'tea',
+    price: 13.0,
+    description: 'Servido gelado, levemente cítrico e floral.',
+  },
+  {
+    id: 'carrot-cake',
+    name: 'Bolo de Cenoura',
+    category: 'sweets',
+    price: 15.0,
+    description: 'Fatia generosa com ganache de chocolate meio amargo.',
+  },
+  {
+    id: 'cookie',
+    name: 'Cookie de Chocolate',
+    category: 'sweets',
+    price: 10.0,
+    description: 'Casquinha crocante, centro macio, sal em flocos.',
+  },
+  {
+    id: 'basque',
+    name: 'Basque Cheesecake',
+    category: 'sweets',
+    price: 19.0,
+    description: 'Cremoso por dentro, caramelizado por fora.',
+  },
+  {
+    id: 'avocado-toast',
+    name: 'Avocado Toast',
+    category: 'savory',
+    price: 24.0,
+    description: 'Pão de fermentação natural, abacate, ovo poché e pimenta.',
+  },
+  {
+    id: 'grilled-cheese',
+    name: 'Grilled Cheese',
+    category: 'savory',
+    price: 22.0,
+    description: 'Queijos derretidos no pão na chapa com manteiga.',
+  },
+  {
+    id: 'quiche',
+    name: 'Quiche de Alho-poró',
+    category: 'savory',
+    price: 21.0,
+    description: 'Massa amanteigada com recheio cremoso de alho-poró.',
+  },
+]
